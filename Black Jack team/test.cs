@@ -10,7 +10,7 @@ namespace Black_Jack_team
         {
             Console.Write("gomi");
             Console.Write("森祐樹");
-            Console.WriteLine("ポケモンG０");
+            Console.WriteLine("ポケモンGO");
             ///
         }
         
