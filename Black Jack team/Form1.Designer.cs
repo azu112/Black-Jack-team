@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            start = new System.Windows.Forms.Button();
+            rule = new System.Windows.Forms.Button();
+            textBox1 = new System.Windows.Forms.TextBox();
+            SuspendLayout();
+            // 
+            // start
+            // 
+            start.Location = new System.Drawing.Point(454, 197);
+            start.Name = "start";
+            start.Size = new System.Drawing.Size(228, 79);
+            start.TabIndex = 0;
+            start.Text = "スタート";
+            start.UseVisualStyleBackColor = true;
+            start.Click += button1_Click;
+            // 
+            // rule
+            // 
+            rule.Location = new System.Drawing.Point(454, 320);
+            rule.Name = "rule";
+            rule.Size = new System.Drawing.Size(228, 76);
+            rule.TabIndex = 0;
+            rule.Text = "ルール";
+            rule.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(344, 59);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(434, 47);
+            textBox1.TabIndex = 1;
+            textBox1.Text = "ＢＬＡＣＫＪＡＣＫ";
+            textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1107, 450);
+            Controls.Add(textBox1);
+            Controls.Add(rule);
+            Controls.Add(start);
+            Name = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private System.Windows.Forms.Button start;
+        private System.Windows.Forms.Button rule;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
