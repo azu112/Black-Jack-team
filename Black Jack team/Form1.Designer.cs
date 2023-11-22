@@ -28,59 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            start = new System.Windows.Forms.Button();
-            rule = new System.Windows.Forms.Button();
-            textBox1 = new System.Windows.Forms.TextBox();
+            Start_Button = new System.Windows.Forms.Button();
+            Rule_Button = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
-            // start
+            // Start_Button
             // 
-            start.Location = new System.Drawing.Point(454, 197);
-            start.Name = "start";
-            start.Size = new System.Drawing.Size(228, 79);
-            start.TabIndex = 0;
-            start.Text = "スタート";
-            start.UseVisualStyleBackColor = true;
-            start.Click += button1_Click;
+            Start_Button.Font = new System.Drawing.Font("Yu Gothic UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Start_Button.Location = new System.Drawing.Point(448, 196);
+            Start_Button.Name = "Start_Button";
+            Start_Button.Size = new System.Drawing.Size(269, 116);
+            Start_Button.TabIndex = 1;
+            Start_Button.Text = "スタート";
+            Start_Button.UseVisualStyleBackColor = true;
+            Start_Button.Click += Start_Button_Click;
             // 
-            // rule
+            // Rule_Button
             // 
-            rule.Location = new System.Drawing.Point(454, 320);
-            rule.Name = "rule";
-            rule.Size = new System.Drawing.Size(228, 76);
-            rule.TabIndex = 0;
-            rule.Text = "ルール";
-            rule.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new System.Drawing.Point(343, 100);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(434, 47);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "ＢＬＡＣＫＪＡＣＫ";
-            textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            textBox1.TextChanged += textBox1_TextChanged;
+            Rule_Button.Font = new System.Drawing.Font("Yu Gothic UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Rule_Button.Location = new System.Drawing.Point(448, 340);
+            Rule_Button.Name = "Rule_Button";
+            Rule_Button.Size = new System.Drawing.Size(269, 105);
+            Rule_Button.TabIndex = 1;
+            Rule_Button.Text = "ルール";
+            Rule_Button.UseVisualStyleBackColor = true;
+            Rule_Button.Click += Rule_Button_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1107, 450);
-            Controls.Add(textBox1);
-            Controls.Add(rule);
-            Controls.Add(start);
+            ClientSize = new System.Drawing.Size(1154, 500);
+            Controls.Add(Rule_Button);
+            Controls.Add(Start_Button);
             Name = "Form1";
-            Load += Form1_Load;
+            Text = "Form1";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.Button start;
-        private System.Windows.Forms.Button rule;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Start_Button;
+        private System.Windows.Forms.Button Rule_Button;
     }
 }

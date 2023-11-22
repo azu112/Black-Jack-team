@@ -17,19 +17,24 @@ namespace Black_Jack_team
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Start_Button_Click(object sender, EventArgs e)
         {
+            ///次画面を非表示
+            this.Visible = false;
 
+            //GameScreenを表示
+            Form3 f3 = new Form3();
+            f3.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Rule_Button_Click(object sender, EventArgs e)
         {
+            ///次画面を非表示
+            this.Visible = false;
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            //RuleScreenを表示
+            Form2 f2 = new Form2();
+            f2.Show();
         }
     }
 }
