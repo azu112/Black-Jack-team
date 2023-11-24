@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Black_Jack_team
 {
-    public partial class Form1 : Form
+    public partial class Top_Screen : Form
     {
-        public Form1()
+        public Top_Screen()
         {
             InitializeComponent();
         }
@@ -23,8 +23,8 @@ namespace Black_Jack_team
             this.Visible = false;
 
             //GameScreenを表示
-            Form3 f3 = new Form3();
-            f3.Show();
+            Play_Screen Play = new Play_Screen();
+            Play.Show();
         }
 
         private void Rule_Button_Click(object sender, EventArgs e)
@@ -33,8 +33,13 @@ namespace Black_Jack_team
             this.Visible = false;
 
             //RuleScreenを表示
-            Form2 f2 = new Form2();
-            f2.Show();
+            Rule_Screen Rule = new Rule_Screen();
+            Rule.Show();
+        }
+
+        private void Top_Screen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

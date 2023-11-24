@@ -1,6 +1,6 @@
 ﻿namespace Black_Jack_team
 {
-    partial class Form1
+    partial class Top_Screen
     {
         /// <summary>
         ///  Required designer variable.
@@ -54,15 +54,16 @@
             Rule_Button.UseVisualStyleBackColor = true;
             Rule_Button.Click += Rule_Button_Click;
             // 
-            // Form1
+            // Top_Screen
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1154, 500);
             Controls.Add(Rule_Button);
             Controls.Add(Start_Button);
-            Name = "Form1";
+            Name = "Top_Screen";
             Text = "Form1";
+            FormClosed += Top_Screen_FormClosed;
             ResumeLayout(false);
         }
 

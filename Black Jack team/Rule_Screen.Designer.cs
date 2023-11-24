@@ -1,6 +1,6 @@
 ﻿namespace Black_Jack_team
 {
-    partial class Form3_RuleScreen
+    partial class Rule_Screen
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             textBox1 = new System.Windows.Forms.TextBox();
+            Back = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // button1
@@ -63,16 +64,29 @@
             textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // Form3_RuleScreen
+            // Back
+            // 
+            Back.Location = new System.Drawing.Point(975, 367);
+            Back.Name = "Back";
+            Back.Size = new System.Drawing.Size(141, 70);
+            Back.TabIndex = 1;
+            Back.Text = "TOPに戻る";
+            Back.UseVisualStyleBackColor = true;
+            Back.Click += Back_Click;
+            // 
+            // Rule_Screen
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1148, 449);
             Controls.Add(textBox1);
+            Controls.Add(Back);
             Controls.Add(button2);
             Controls.Add(button1);
-            Name = "Form3_RuleScreen";
+            Name = "Rule_Screen";
             Text = "Form3_RuleScreen";
+            FormClosed += Rule_Screen_FormClosed;
+            Load += Rule_Screen_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -82,5 +96,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Back;
     }
 }
