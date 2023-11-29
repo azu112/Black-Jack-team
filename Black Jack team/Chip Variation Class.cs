@@ -8,25 +8,26 @@ namespace Black_Jack_team
 {
     public class Chip_Variation_Class
     {
-        Chip_Variation_Class()
+        Chip_Variation_Class() //所持金変動クラス
         {
-         static void IncreaseInPossessions()
+         static void IncreaseInPossessions()　//所持金の増加
+            {
+                
+                
+            }
+         static void DecreaseInPossessions()　//所持金の減少
             {
 
             }
-         static void DecreaseInPossessions()
+         static void ConvertYourMoneyIntoChips()　//所持金をチップに変換
             {
 
             }
-         static void ConvertYourMoneyIntoChips()
+         static void RefundOfPossessionMoney()　//所持金返金
             {
 
             }
-         static void RefundOfPossessionMoney()
-            {
-
-            }
-         static void GameOverDueToZeroMoneyInPossession()
+         static void GameOverDueToZeroMoneyInPossession()　//所持金によるゲームオーバー
             {
 
             }
