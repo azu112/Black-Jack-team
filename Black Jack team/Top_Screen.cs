@@ -41,5 +41,15 @@ namespace Black_Jack_team
         {
             Application.Exit();
         }
+
+        private void Top_Screen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
