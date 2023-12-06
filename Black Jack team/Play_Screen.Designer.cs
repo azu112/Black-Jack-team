@@ -143,7 +143,7 @@
             // 
             Bet_display.AutoSize = true;
             Bet_display.Font = new System.Drawing.Font("Yu Gothic UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Bet_display.Location = new System.Drawing.Point(272, 26);
+            Bet_display.Location = new System.Drawing.Point(331, 26);
             Bet_display.Name = "Bet_display";
             Bet_display.Size = new System.Drawing.Size(222, 133);
             Bet_display.TabIndex = 7;
