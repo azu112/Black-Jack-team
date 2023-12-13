@@ -1,6 +1,6 @@
 ﻿namespace Black_Jack_team
 {
-    partial class Form1
+    partial class Top_Screen
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,6 +30,7 @@
         {
             Start_Button = new System.Windows.Forms.Button();
             Rule_Button = new System.Windows.Forms.Button();
+            Title = new System.Windows.Forms.Label();
             SuspendLayout();
             // 
             // Start_Button
@@ -54,20 +55,39 @@
             Rule_Button.UseVisualStyleBackColor = true;
             Rule_Button.Click += Rule_Button_Click;
             // 
-            // Form1
+            // Title
+            // 
+            Title.AutoSize = true;
+            Title.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Title.Location = new System.Drawing.Point(193, 34);
+            Title.Name = "Title";
+            Title.Size = new System.Drawing.Size(803, 112);
+            Title.TabIndex = 2;
+            Title.Text = "ＢＬＡＣＫＪＡＣＫ";
+            Title.Click += label1_Click;
+            // 
+            // Top_Screen
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1154, 500);
+            BackgroundImage = Properties.Resources.image;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            ClientSize = new System.Drawing.Size(1183, 500);
+            Controls.Add(Title);
             Controls.Add(Rule_Button);
             Controls.Add(Start_Button);
-            Name = "Form1";
+            DoubleBuffered = true;
+            Name = "Top_Screen";
             Text = "Form1";
+            FormClosed += Top_Screen_FormClosed;
+            Load += Top_Screen_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private System.Windows.Forms.Button Start_Button;
         private System.Windows.Forms.Button Rule_Button;
+        private System.Windows.Forms.Label Title;
     }
 }
