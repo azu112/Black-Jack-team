@@ -10,11 +10,11 @@ namespace Black_Jack_team
     {
         public Game_processing_class() 
         {
-            static void WhenYouPressBETorDEAL()
+            static void BetDecision()
             {
 
             }
-            static void DecisionTime()
+            static void StandDecision()
             {
 
             }
@@ -22,7 +22,7 @@ namespace Black_Jack_team
             {
 
             }
-            static void DealerNumericChange()
+            static void HitDecision()
             {
 
             }
