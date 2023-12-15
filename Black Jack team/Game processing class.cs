@@ -8,7 +8,7 @@ namespace Black_Jack_team
 {
     internal class Game_processing_class
     {
-        public Game_processing_class() 
+        public Game_processing_class()
         {
             static void BetDecision()
             {
@@ -18,7 +18,7 @@ namespace Black_Jack_team
             {
 
             }
-            static void DrawTime()
+            static void DoubleDecision()
             {
 
             }
@@ -26,22 +26,8 @@ namespace Black_Jack_team
             {
 
             }
-            static void PlayerNumberChange()
-            {
-
-            }
-            static void WhenYouHave0MoneyInYour()
-            {
-
-            }
-            static void ForEachDeckOfCardsDrawn()
-            {
-
-            }
-            static void AtTheEndOfOneGame()
-            {
-
-            }
         }
+    
     }
 }
+
