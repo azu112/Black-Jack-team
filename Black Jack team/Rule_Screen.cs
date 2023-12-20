@@ -53,10 +53,10 @@ namespace Black_Jack_team
                     pictureBox1.Image = Properties.Resources._2;
                     break;
                 case 2:
-                    pictureBox1.Image = Properties.Resources._3;
+                    pictureBox1.Image = Properties.Resources._10;
                     break;
                 case 3:
-                    pictureBox1.Image = Properties.Resources._4;
+                    pictureBox1.Image = Properties.Resources._8;
                     break;
                 case 4:
                     pictureBox1.Image = Properties.Resources._5;
@@ -65,7 +65,7 @@ namespace Black_Jack_team
                     pictureBox1.Image = Properties.Resources._6;
                     break;
                 case 6:
-                    pictureBox1.Image = Properties.Resources._1;
+                    pictureBox1.Image = Properties.Resources._9;
                     break;
 
             }

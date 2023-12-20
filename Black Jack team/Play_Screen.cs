@@ -30,30 +30,7 @@ namespace Black_Jack_team
 
         private void Deal_screen_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            if (btn.Visible == false)
-            {
 
-            }
-            else
-            {
-                //ボタン非表示
-                Deal_Button.Visible = false;
-                Bet_Button.Visible = false;
-            }
-
-            //Dealボタンが押された場合、表示する
-            Hit_Button.Visible = true;
-            Stand_Button.Visible = true;
-            Double_Button.Visible = true;
-            if (btn.Text == "Deal")
-            {
-                //Dealボタンに反応
-            }
-            else
-            {
-                //Betボタンに反応
-            }
         }
 
         private void Play_Screen_Load(object sender, EventArgs e)
@@ -74,16 +51,6 @@ namespace Black_Jack_team
             top.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Hit_Button_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Play_Screen_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -91,33 +58,6 @@ namespace Black_Jack_team
 
         private void Bet_Button_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            if (btn.Visible == false)
-            {
-
-            }
-            else
-            {
-                //ボタン非表示
-                Deal_Button.Visible = false;
-                Bet_Button.Visible = false;
-            }
-
-            //Dealボタンが押された場合、表示する
-            Bet_display.Visible = true;
-            Reset_Button.Visible = true;
-            Confirm_Button.Visible = true;
-            pictureBox1.Visible = true;
-            pictureBox3.Visible = true;
-            pictureBox4.Visible = true;
-            if (btn.Text == "Bet")
-            {
-                //Dealボタンに反応
-            }
-            else
-            {
-                //Betボタンに反応
-            }
 
         }
 
@@ -133,37 +73,99 @@ namespace Black_Jack_team
 
         private void Confirm_Button_Click(object sender, EventArgs e)
         {
+            if (start_Button.Visible == false)
+            {
+                //ボタン表示
+                //start_Button.Visible = true;
+                //Hit_Button.Visible = false;
+                //Stand_Button.Visible = false;
+                //Double_Button.Visible = false;
+            }
+            else
+            {
+                //ボタン非表示
+                start_Button.Visible = false;
+                Reset_Button.Visible = false;
+                Bet_display.Visible = false;
+                pictureBox1.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                Hit_Button.Visible = true;
+                Stand_Button.Visible = true;
+                Double_Button.Visible = true;
+            }
 
         }
 
+
+
+
+
+        private void Bet_display_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // 選択された掛け金
+        private int betAmount = 0;
+
+
+        // 100円のボタンがクリックされたときの処理
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            SetBetAmount(100);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            pictureBox2.Parent = pictureBox1;
-        }
-
+        // 500円のボタンがクリックされたときの処理
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            pictureBox2.Parent = pictureBox3;
+            SetBetAmount(500);
         }
 
+        // 1000円のボタンがクリックされたときの処理
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            pictureBox2.Parent = pictureBox4;
+            SetBetAmount(1000);
+        }
+
+        // 掛け金を設定するメソッド
+        private void SetBetAmount(int amount)
+        {
+            betAmount = amount;
+            UpdateBetDisplay();
+        }
+
+        // Bet_displayを更新するメソッド
+        private void UpdateBetDisplay()
+        {
+            Bet_display.Text = $"Bet:$ {betAmount}";
+        }
+
+        private void Bet_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void Hit_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Hit_Button_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
+
+
+
+
+
+
+
+
 }
+
+
