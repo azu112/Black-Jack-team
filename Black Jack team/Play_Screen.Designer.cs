@@ -61,7 +61,7 @@
             // Reset_Button
             // 
             Reset_Button.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Reset_Button.Location = new System.Drawing.Point(774, 26);
+            Reset_Button.Location = new System.Drawing.Point(812, 26);
             Reset_Button.Name = "Reset_Button";
             Reset_Button.Size = new System.Drawing.Size(189, 67);
             Reset_Button.TabIndex = 3;
@@ -72,7 +72,7 @@
             // start_Button
             // 
             start_Button.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            start_Button.Location = new System.Drawing.Point(774, 99);
+            start_Button.Location = new System.Drawing.Point(812, 99);
             start_Button.Name = "start_Button";
             start_Button.Size = new System.Drawing.Size(189, 66);
             start_Button.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             Bet_display.AutoSize = true;
             Bet_display.Font = new System.Drawing.Font("Yu Gothic UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Bet_display.Location = new System.Drawing.Point(331, 26);
+            Bet_display.Location = new System.Drawing.Point(185, 26);
             Bet_display.Name = "Bet_display";
             Bet_display.Size = new System.Drawing.Size(222, 133);
             Bet_display.TabIndex = 7;

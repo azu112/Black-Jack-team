@@ -13,6 +13,7 @@ namespace Black_Jack_team
 {
     public partial class Play_Screen : Form
     {
+        
         public Play_Screen()
         {
             InitializeComponent();
@@ -113,19 +114,19 @@ namespace Black_Jack_team
         // 100円のボタンがクリックされたときの処理
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            SetBetAmount(100);
+            SetBetAmount(betAmount+100);
         }
 
         // 500円のボタンがクリックされたときの処理
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            SetBetAmount(500);
+            SetBetAmount(betAmount + 500);
         }
 
         // 1000円のボタンがクリックされたときの処理
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            SetBetAmount(1000);
+            SetBetAmount(betAmount + 1000);
         }
 
         // 掛け金を設定するメソッド
