@@ -8,40 +8,26 @@ namespace Black_Jack_team
 {
     internal class Game_processing_class
     {
-        public Game_processing_class() 
+        public Game_processing_class()
         {
-            static void WhenYouPressBETorDEAL()
+            static void BetDecision()
             {
 
             }
-            static void DecisionTime()
+            static void StandDecision()
             {
 
             }
-            static void DrawTime()
+            static void DoubleDecision()
             {
 
             }
-            static void DealerNumericChange()
-            {
-
-            }
-            static void PlayerNumberChange()
-            {
-
-            }
-            static void WhenYouHave0MoneyInYour()
-            {
-
-            }
-            static void ForEachDeckOfCardsDrawn()
-            {
-
-            }
-            static void AtTheEndOfOneGame()
+            static void HitDecision()
             {
 
             }
         }
+    
     }
 }
+
