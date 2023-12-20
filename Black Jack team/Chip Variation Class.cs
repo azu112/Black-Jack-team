@@ -6,34 +6,18 @@ using System.Text;
 
 namespace Black_Jack_team
 {
-    public class Chip_Variation_Class
+    class Chip_Variation_Class
     {
-        Chip_Variation_Class() //所持金変動クラス
+        public int meny = 1000;
+        public void IncreaseInPossessions(int num) //所持金の増加
         {
-         static void IncreaseInPossessions()　//所持金の増加
-            {
-                
-                
-            }
-         static void DecreaseInPossessions()　//所持金の減少
-            {
 
-            }
-         static void ConvertYourMoneyIntoChips()　//所持金をチップに変換
-            {
+            meny += num;
 
-            }
-         static void RefundOfPossessionMoney()　//所持金返金
-            {
-
-            }
-         static void GameOverDueToZeroMoneyInPossession()　//所持金によるゲームオーバー
-            {
-
-            }
         }
-              
-        
-
+        public void DecreaseInPossessions(int num) //所持金の減少
+        {
+            meny -= num;
+        }
     }
 }
