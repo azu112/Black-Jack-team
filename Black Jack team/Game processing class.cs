@@ -8,26 +8,47 @@ namespace Black_Jack_team
 {
     internal class Game_processing_class
     {
-        public Game_processing_class()
-        {
+        public Chip_Variation_Class chip=new Chip_Variation_Class();
+
+            
             static void BetDecision()
             {
 
             }
-            static void StandDecision()
-            {
 
-            }
-            static void DoubleDecision()
+        public void DoubleDecision(int bet, int my, int deel)
+        {
+            if (Judge(my, deel))
             {
-
+                chip.hueru(bet * 2*2);
             }
+        }
             static void HitDecision()
             {
 
             }
+        
+
+        public void StandDecision(int bet,int my,int deel)
+        {
+            if (Judge(my,deel))
+            {
+                chip.hueru(bet * 2);
+            }
+           
         }
-    
+        public bool Judge(int mynum,int deelnum)
+        {
+            if(mynum>deelnum)
+            {
+                if (mynum <= 21)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
 

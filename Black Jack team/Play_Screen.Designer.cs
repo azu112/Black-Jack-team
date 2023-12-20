@@ -110,6 +110,7 @@
             pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -168,6 +169,7 @@
             Stand_Button.Text = "STAND";
             Stand_Button.UseVisualStyleBackColor = true;
             Stand_Button.Visible = false;
+            Stand_Button.Click += Stand_Button_Click;
             // 
             // Double_Button
             // 
@@ -240,6 +242,6 @@
         private System.Windows.Forms.Button Hit_Button;
         private System.Windows.Forms.Button Stand_Button;
         private System.Windows.Forms.Button Double_Button;
-        
+
     }
 }
