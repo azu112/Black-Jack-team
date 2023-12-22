@@ -8,12 +8,12 @@ namespace Black_Jack_team
 {
     internal class Game_processing_class
     {
-
         public Chip_Variation_Class chip = new Chip_Variation_Class();
+        public Deck_card_class Card = new Deck_card_class();
         int my;
         public string myhiitano="kuroba6c4";
         public string deelhiitano = "c5c4d13";
-        static void BetDecision()
+        public  void BetDecision()
         {
 
         }
@@ -30,12 +30,16 @@ namespace Black_Jack_team
             }
             //ディーラーや自分が引いたカードをFoomに伝える方法を考える
         }
-        static void HitDecision()
+        public void HitDecision()
         {
 
         }
 
+        public void Cardhiki()
+        {
 
+            return;
+        }
 
         public void StandDecision(int bet, int my, int deel)
         {
