@@ -41,10 +41,15 @@
             Stand_Button = new System.Windows.Forms.Button();
             Double_Button = new System.Windows.Forms.Button();
             Hit_Button = new System.Windows.Forms.Button();
+            pictureBox5 = new System.Windows.Forms.PictureBox();
+            pictureBox6 = new System.Windows.Forms.PictureBox();
+            button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // end
@@ -83,10 +88,10 @@
             // Bet_display
             // 
             Bet_display.AutoSize = true;
-            Bet_display.Font = new System.Drawing.Font("Yu Gothic UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Bet_display.Location = new System.Drawing.Point(185, 26);
+            Bet_display.Font = new System.Drawing.Font("Yu Gothic UI", 63F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Bet_display.Location = new System.Drawing.Point(173, 25);
             Bet_display.Name = "Bet_display";
-            Bet_display.Size = new System.Drawing.Size(222, 133);
+            Bet_display.Size = new System.Drawing.Size(233, 140);
             Bet_display.TabIndex = 7;
             Bet_display.Text = "Bet:";
             Bet_display.Click += Bet_display_Click;
@@ -150,7 +155,7 @@
             // 
             pictureBox4.BackColor = System.Drawing.Color.Transparent;
             pictureBox4.Image = Properties.Resources.chip1000;
-            pictureBox4.Location = new System.Drawing.Point(733, 218);
+            pictureBox4.Location = new System.Drawing.Point(720, 218);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new System.Drawing.Size(180, 180);
             pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +195,40 @@
             Hit_Button.Text = "HIT";
             Hit_Button.UseVisualStyleBackColor = true;
             Hit_Button.Visible = false;
-            Hit_Button.Click += Hit_Button_Click_1;
+            Hit_Button.Click += Hit_Button_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            pictureBox5.Image = Properties.Resources.H_1;
+            pictureBox5.Location = new System.Drawing.Point(518, 26);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new System.Drawing.Size(101, 139);
+            pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 14;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            pictureBox6.Image = Properties.Resources.H_1;
+            pictureBox6.Location = new System.Drawing.Point(518, 301);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new System.Drawing.Size(101, 139);
+            pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 14;
+            pictureBox6.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button1.Location = new System.Drawing.Point(625, 411);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(275, 72);
+            button1.TabIndex = 1;
+            button1.Text = "テスト用button";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Play_Screen
             // 
@@ -198,6 +236,9 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(1109, 497);
+            Controls.Add(button1);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox5);
             Controls.Add(Hit_Button);
             Controls.Add(Double_Button);
             Controls.Add(Stand_Button);
@@ -220,6 +261,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -240,6 +283,8 @@
         private System.Windows.Forms.Button Hit_Button;
         private System.Windows.Forms.Button Stand_Button;
         private System.Windows.Forms.Button Double_Button;
-        
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button button1;
     }
 }

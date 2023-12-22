@@ -13,7 +13,8 @@ namespace Black_Jack_team
 {
     public partial class Play_Screen : Form
     {
-        
+        Game_processing_class game = new Game_processing_class();
+
         public Play_Screen()
         {
             InitializeComponent();
@@ -69,7 +70,7 @@ namespace Black_Jack_team
 
         private void Reset_Button_Click(object sender, EventArgs e)
         {
-
+            SetBetAmount(0);
         }
 
         private void Confirm_Button_Click(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace Black_Jack_team
         // 100円のボタンがクリックされたときの処理
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            SetBetAmount(betAmount+100);
+            SetBetAmount(betAmount + 100);
         }
 
         // 500円のボタンがクリックされたときの処理
@@ -151,12 +152,240 @@ namespace Black_Jack_team
 
         private void Hit_Button_Click(object sender, EventArgs e)
         {
+            //game.
+            //ChangeCard(pictureBox5, game.hiitano);
+        }
+
+        
+
+        private void ChangeCard(PictureBox picture, string str)
+        {
+            switch (str)
+            {
+                case "C_1":
+                    picture.Image = Properties.Resources.C_1;
+
+                    break;
+                case "C_2":
+                    picture.Image = Properties.Resources.C_2;
+
+                    break;
+                case "C_3":
+                    picture.Image = Properties.Resources.C_3;
+
+                    break;
+                case "C_4":
+                    picture.Image = Properties.Resources.C_4;
+
+                    break;
+                case "C_5":
+                    picture.Image = Properties.Resources.C_5;
+
+                    break;
+                case "C_6":
+                    picture.Image = Properties.Resources.C_6;
+
+                    break;
+                case "C_7":
+                    picture.Image = Properties.Resources.C_7;
+
+                    break;
+                case "C_8":
+                    picture.Image = Properties.Resources.C_8;
+
+                    break;
+                case "C_9":
+                    picture.Image = Properties.Resources.C_9;
+
+                    break;
+                case "C_10":
+                    picture.Image = Properties.Resources.C_10;
+
+                    break;
+                case "C_11":
+                    picture.Image = Properties.Resources.C_11;
+
+                    break;
+                case "C_12":
+                    picture.Image = Properties.Resources.C_12;
+
+                    break;
+                case "C_13":
+                    picture.Image = Properties.Resources.C_13;
+
+                    break;
+                case "D_1":
+                    picture.Image = Properties.Resources.D_1;
+
+                    break;
+                case "D_2":
+                    picture.Image = Properties.Resources.D_2;
+
+                    break;
+                case "D_3":
+                    picture.Image = Properties.Resources.D_3;
+
+                    break;
+                case "D_4":
+                    picture.Image = Properties.Resources.D_4;
+
+                    break;
+                case "D_5":
+                    picture.Image = Properties.Resources.D_5;
+
+                    break;
+                case "D_6":
+                    picture.Image = Properties.Resources.D_6;
+
+                    break;
+                case "D_7":
+                    picture.Image = Properties.Resources.D_7;
+
+                    break;
+                case "D_8":
+                    picture.Image = Properties.Resources.D_8;
+
+                    break;
+                case "D_9":
+                    picture.Image = Properties.Resources.D_9;
+
+                    break;
+                case "D_10":
+                    picture.Image = Properties.Resources.D_10;
+
+                    break;
+                case "D_11":
+                    picture.Image = Properties.Resources.D_11;
+
+                    break;
+                case "D_12":
+                    picture.Image = Properties.Resources.D_12;
+
+                    break;
+                case "D_13":
+                    picture.Image = Properties.Resources.D_13;
+
+                    break;
+                case "H_1":
+                    picture.Image = Properties.Resources.H_1;
+
+                    break;
+                case "H_2":
+                    picture.Image = Properties.Resources.H_2;
+
+                    break;
+                case "H_3":
+                    picture.Image = Properties.Resources.H_3;
+
+                    break;
+                case "H_4":
+                    picture.Image = Properties.Resources.H_4;
+
+                    break;
+                case "H_5":
+                    picture.Image = Properties.Resources.H_5;
+
+                    break;
+                case "H_6":
+                    picture.Image = Properties.Resources.H_6;
+
+                    break;
+                case "H_7":
+                    picture.Image = Properties.Resources.H_7;
+
+                    break;
+                case "H_8":
+                    picture.Image = Properties.Resources.H_8;
+
+                    break;
+                case "H_9":
+                    picture.Image = Properties.Resources.H_9;
+
+                    break;
+                case "H_10":
+                    picture.Image = Properties.Resources.H_10;
+
+                    break;
+                case "H_11":
+                    picture.Image = Properties.Resources.H_11;
+
+                    break;
+                case "H_12":
+                    picture.Image = Properties.Resources.H_12;
+
+                    break;
+                case "H_13":
+                    picture.Image = Properties.Resources.H_13;
+
+                    break;
+                case "S_1":
+                    picture.Image = Properties.Resources.S_1;
+
+                    break;
+                case "S_2":
+                    picture.Image = Properties.Resources.S_2;
+
+                    break;
+                case "S_3":
+                    picture.Image = Properties.Resources.S_3;
+
+                    break;
+                case "S_4":
+                    picture.Image = Properties.Resources.S_4;
+
+                    break;
+                case "S_5":
+                    picture.Image = Properties.Resources.S_5;
+
+                    break;
+                case "S_6":
+                    picture.Image = Properties.Resources.S_6;
+
+                    break;
+                case "S_7":
+                    picture.Image = Properties.Resources.S_7;
+
+                    break;
+                case "S_8":
+                    picture.Image = Properties.Resources.S_8;
+
+                    break;
+                case "S_9":
+                    picture.Image = Properties.Resources.S_9;
+
+                    break;
+                case "S_10":
+                    picture.Image = Properties.Resources.S_10;
+
+                    break;
+                case "S_11":
+                    picture.Image = Properties.Resources.S_11;
+
+                    break;
+                case "S_12":
+                    picture.Image = Properties.Resources.S_12;
+
+                    break;
+                case "S_13":
+                    picture.Image = Properties.Resources.S_13;
+
+                    break;
+                default:
+                    MessageBox.Show("Card表示でエラーが起きました");
+                    break;
+
+
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void Hit_Button_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            ChangeCard(pictureBox5,"H_13");
         }
     }
 
