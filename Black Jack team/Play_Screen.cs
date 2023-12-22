@@ -387,6 +387,11 @@ namespace Black_Jack_team
         {
             ChangeCard(pictureBox5,"H_13");
         }
+
+        private void Stand_Button_Click(object sender, EventArgs e)
+        {
+            ;
+        }
     }
 
 
