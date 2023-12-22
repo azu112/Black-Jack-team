@@ -32,8 +32,6 @@ namespace Black_Jack_team
         //    }
 
 
-
-
         //}
 
         public void ResettingADeck()
