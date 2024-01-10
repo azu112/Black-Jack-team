@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Policy;
 using System.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Black_Jack_team
@@ -13,8 +14,17 @@ namespace Black_Jack_team
         int mydata, deeldata;
         public string mydraw = "";
         public string deeldraw = "";
-        public  void BetDecision()
+        public  void BetDecision(int meny)
         {
+            //所持金を減らす
+            chip.DecreaseInPossessions(meny);
+            //自分が1枚引く
+            mydraw = Card.IllGiveYouOneInMyHand();
+            mydata = GetCardNum(mydraw);
+            //ディーラーも引く
+            deeldraw = Card.IllGiveYouOneInMyHand();
+            deeldata = GetCardNum(deeldraw);
+            
 
         }
         public void Goukeiti()
@@ -27,19 +37,23 @@ namespace Black_Jack_team
             mydraw = Card.IllGiveYouOneInMyHand();
 
             //合計値を何とかするメソッド
-            mydata = henkan(mydraw);
+            mydata += GetCardNum(mydraw);
 
             //ディーラーがカードを引いたりする
             deeldraw = Card.IllGiveYouOneInMyHand();
-            //ディーラー17になるまでループ？
-
             //合計値を何とかするメソッド
-            deeldata = henkan(deeldraw);
-
+            deeldata += GetCardNum(deeldraw);
+            //ディーラー17になるまでループ？
+            for(int i = 0; deeldata < 17; i++)
+            {
+                deeldraw = Card.IllGiveYouOneInMyHand();
+                deeldata += GetCardNum(deeldraw);
+            }
             if (Judge(my, deel))
             {
                 chip.IncreaseInPossessions(bet * 2 * 2);
             }
+
             //ディーラーや自分が引いたカードをFoomに伝える方法を考える
         }
         public void HitDecision()
@@ -47,16 +61,29 @@ namespace Black_Jack_team
 
         }
 
-        public void henkan(int data,string dada)
+        public int GetCardNum(string dada)
         {
+            int data;
             string[] split = dada.Split('_');
             data= int.Parse(split[1]);
-            
-            return;
+
+            if (data > 10)
+            {
+                data=10;
+            }else if (data == 1)
+            {
+                data=11;
+            }
+             return data;
         }
 
         public void StandDecision(int bet, int my, int deel)
         {
+            for (int i = 0; deeldata < 17; i++)
+            {
+                deeldraw = Card.IllGiveYouOneInMyHand();
+                deeldata += GetCardNum(deeldraw);
+            }
             //ディーラーがカードを引いたり
             if (Judge(my, deel))
             {
@@ -75,6 +102,8 @@ namespace Black_Jack_team
             }
             return false;
         }
+        //Aを取った時の処理 IFで確認　AがでたらAチェッカー変数を1にする　ゲームオーバー処理にAチェッカーを0にする処理を作る
+        //Aチェッカーを0にするメソッド必要かも？
 
     }
 }
