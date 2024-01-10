@@ -16,24 +16,20 @@ namespace Black_Jack_team
 
 
         //今の段階だとエラーになるのでいったんこの状態にします。
-        //public toranpuzukuri()
-        //{
+        public Deck_card_class()
+        {
 
 
-        //    for (int i = 0; i < 4; i++)
-        //    {
-        //        for (int j = 0; j < 13; j++)
-        //        {
-        //            string kari = sert[i] + suuji[j];
-        //            tora.Add(kari);
-
-        //        }
-
-        //    }
-
-
-        //}
-
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 13; j++)
+                {
+                    string kari = sert[i] + suuji[j];
+                    tora.Add(kari);
+                }
+            }
+        }
+        //カード山札に戻す
         public void ResettingADeck()
         {
 
@@ -45,6 +41,7 @@ namespace Black_Jack_team
             }
 
         }
+        //手札引く処理
         public string IllGiveYouOneInMyHand()
         {
 
