@@ -11,15 +11,17 @@ namespace Black_Jack_team
     {
         public Chip_Variation_Class chip = new Chip_Variation_Class();
         public Deck_card_class Card = new Deck_card_class();
-        int mydata, deeldata;
+        int mydata, deeldata,Akakuni;
         public string mydraw = "";
         public string deeldraw = "";
+        private int Acunt = 0;
         public  void BetDecision(int meny)
         {
             //所持金を減らす
             chip.DecreaseInPossessions(meny);
             //自分が1枚引く
             mydraw = Card.IllGiveYouOneInMyHand();
+
             mydata = GetCardNum(mydraw);
             //ディーラーも引く
             deeldraw = Card.IllGiveYouOneInMyHand();
@@ -35,19 +37,22 @@ namespace Black_Jack_team
         {
             //カードを引く
             mydraw = Card.IllGiveYouOneInMyHand();
-
+            AChecker(mydraw);
             //合計値を何とかするメソッド
             mydata += GetCardNum(mydraw);
-
+            ABurst(mydata);
             //ディーラーがカードを引いたりする
             deeldraw = Card.IllGiveYouOneInMyHand();
+            AChecker(mydraw);
             //合計値を何とかするメソッド
             deeldata += GetCardNum(deeldraw);
-            //ディーラー17になるまでループ？
-            for(int i = 0; deeldata < 17; i++)
+            ABurst(deeldata);
+            //ディーラー17になるまでループ
+            for (int i = 0; deeldata < 17; i++)
             {
                 deeldraw = Card.IllGiveYouOneInMyHand();
                 deeldata += GetCardNum(deeldraw);
+                AChecker(mydraw);
             }
             if (Judge(my, deel))
             {
@@ -58,7 +63,12 @@ namespace Black_Jack_team
         }
         public void HitDecision()
         {
-
+            //カードを引く
+            mydraw = Card.IllGiveYouOneInMyHand();
+            AChecker(mydraw);
+            //合計値を何とかするメソッド
+            mydata += GetCardNum(mydraw);
+            ABurst(mydata);
         }
 
         public int GetCardNum(string dada)
@@ -79,10 +89,18 @@ namespace Black_Jack_team
 
         public void StandDecision(int bet, int my, int deel)
         {
+            //ディーラーがカードを引いたりする
+            deeldraw = Card.IllGiveYouOneInMyHand();
+            AChecker(mydraw);
+            //合計値を何とかするメソッド
+            deeldata += GetCardNum(deeldraw);
+            ABurst(deeldata);
+            //ディーラー17になるまでループ
             for (int i = 0; deeldata < 17; i++)
             {
                 deeldraw = Card.IllGiveYouOneInMyHand();
                 deeldata += GetCardNum(deeldraw);
+                AChecker(mydraw);
             }
             //ディーラーがカードを引いたり
             if (Judge(my, deel))
@@ -104,7 +122,24 @@ namespace Black_Jack_team
         }
         //Aを取った時の処理 IFで確認　AがでたらAチェッカー変数を1にする　ゲームオーバー処理にAチェッカーを0にする処理を作る
         //Aチェッカーを0にするメソッド必要かも？
+        public void AChecker(string card)
+        {
+            string[] split = card.Split('_');
+            if (split[1] == "1")
+            {
+                Acunt++;
+            }
+        }
 
+        public void ABurst(int data)
+        {
+            if (data > 21 && Acunt > 0)
+            {
+                data -= 10;
+                Acunt--;
+                return;
+            }
+        }
     }
 }
 
