@@ -140,6 +140,10 @@ namespace Black_Jack_team
                 return;
             }
         }
+        public void risetto()
+        {
+
+        }
     }
 }
 
