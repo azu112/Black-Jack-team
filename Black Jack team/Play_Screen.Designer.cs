@@ -41,15 +41,54 @@
             Stand_Button = new System.Windows.Forms.Button();
             Double_Button = new System.Windows.Forms.Button();
             Hit_Button = new System.Windows.Forms.Button();
-            pictureBox5 = new System.Windows.Forms.PictureBox();
-            pictureBox6 = new System.Windows.Forms.PictureBox();
-            button1 = new System.Windows.Forms.Button();
+            deelCard1 = new System.Windows.Forms.PictureBox();
+            myCard1 = new System.Windows.Forms.PictureBox();
+            deelCard2 = new System.Windows.Forms.PictureBox();
+            deelCard3 = new System.Windows.Forms.PictureBox();
+            deelCard4 = new System.Windows.Forms.PictureBox();
+            deelCard5 = new System.Windows.Forms.PictureBox();
+            deelCard6 = new System.Windows.Forms.PictureBox();
+            deelCard7 = new System.Windows.Forms.PictureBox();
+            deelCard8 = new System.Windows.Forms.PictureBox();
+            deelCard9 = new System.Windows.Forms.PictureBox();
+            deelCard10 = new System.Windows.Forms.PictureBox();
+            deelCard11 = new System.Windows.Forms.PictureBox();
+            myCard2 = new System.Windows.Forms.PictureBox();
+            myCard3 = new System.Windows.Forms.PictureBox();
+            myCard4 = new System.Windows.Forms.PictureBox();
+            myCard5 = new System.Windows.Forms.PictureBox();
+            myCard6 = new System.Windows.Forms.PictureBox();
+            myCard7 = new System.Windows.Forms.PictureBox();
+            myCard8 = new System.Windows.Forms.PictureBox();
+            myCard9 = new System.Windows.Forms.PictureBox();
+            myCard10 = new System.Windows.Forms.PictureBox();
+            myCard11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)myCard11).BeginInit();
             SuspendLayout();
             // 
             // end
@@ -199,40 +238,269 @@
             Hit_Button.Visible = false;
             Hit_Button.Click += Hit_Button_Click;
             // 
-            // pictureBox5
+            // deelCard1
             // 
-            pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            pictureBox5.Image = Properties.Resources.H_1;
-            pictureBox5.Location = new System.Drawing.Point(518, 26);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new System.Drawing.Size(101, 139);
-            pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 14;
-            pictureBox5.TabStop = false;
-            pictureBox5.Visible = false;
+            deelCard1.BackColor = System.Drawing.Color.Transparent;
+            deelCard1.Image = Properties.Resources.H_1;
+            deelCard1.Location = new System.Drawing.Point(501, 26);
+            deelCard1.Name = "deelCard1";
+            deelCard1.Size = new System.Drawing.Size(101, 139);
+            deelCard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard1.TabIndex = 14;
+            deelCard1.TabStop = false;
+            deelCard1.Visible = false;
             // 
-            // pictureBox6
+            // myCard1
             // 
-            pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            pictureBox6.Image = Properties.Resources.H_1;
-            pictureBox6.Location = new System.Drawing.Point(518, 301);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new System.Drawing.Size(101, 139);
-            pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 14;
-            pictureBox6.TabStop = false;
-            pictureBox6.Visible = false;
+            myCard1.BackColor = System.Drawing.Color.Transparent;
+            myCard1.Image = Properties.Resources.H_1;
+            myCard1.Location = new System.Drawing.Point(508, 327);
+            myCard1.Name = "myCard1";
+            myCard1.Size = new System.Drawing.Size(101, 139);
+            myCard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard1.TabIndex = 14;
+            myCard1.TabStop = false;
+            myCard1.Visible = false;
             // 
-            // button1
+            // deelCard2
             // 
-            button1.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button1.Location = new System.Drawing.Point(625, 411);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(275, 72);
-            button1.TabIndex = 1;
-            button1.Text = "テスト用button";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            deelCard2.BackColor = System.Drawing.Color.Transparent;
+            deelCard2.Image = Properties.Resources.H_1;
+            deelCard2.Location = new System.Drawing.Point(522, 26);
+            deelCard2.Name = "deelCard2";
+            deelCard2.Size = new System.Drawing.Size(101, 139);
+            deelCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard2.TabIndex = 14;
+            deelCard2.TabStop = false;
+            deelCard2.Visible = false;
+            // 
+            // deelCard3
+            // 
+            deelCard3.BackColor = System.Drawing.Color.Transparent;
+            deelCard3.Image = Properties.Resources.H_1;
+            deelCard3.Location = new System.Drawing.Point(543, 26);
+            deelCard3.Name = "deelCard3";
+            deelCard3.Size = new System.Drawing.Size(101, 139);
+            deelCard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard3.TabIndex = 15;
+            deelCard3.TabStop = false;
+            deelCard3.Visible = false;
+            // 
+            // deelCard4
+            // 
+            deelCard4.BackColor = System.Drawing.Color.Transparent;
+            deelCard4.Image = Properties.Resources.H_1;
+            deelCard4.Location = new System.Drawing.Point(565, 26);
+            deelCard4.Name = "deelCard4";
+            deelCard4.Size = new System.Drawing.Size(101, 139);
+            deelCard4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard4.TabIndex = 16;
+            deelCard4.TabStop = false;
+            deelCard4.Visible = false;
+            // 
+            // deelCard5
+            // 
+            deelCard5.BackColor = System.Drawing.Color.Transparent;
+            deelCard5.Image = Properties.Resources.H_1;
+            deelCard5.Location = new System.Drawing.Point(585, 26);
+            deelCard5.Name = "deelCard5";
+            deelCard5.Size = new System.Drawing.Size(101, 139);
+            deelCard5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard5.TabIndex = 17;
+            deelCard5.TabStop = false;
+            deelCard5.Visible = false;
+            // 
+            // deelCard6
+            // 
+            deelCard6.BackColor = System.Drawing.Color.Transparent;
+            deelCard6.Image = Properties.Resources.H_1;
+            deelCard6.Location = new System.Drawing.Point(608, 26);
+            deelCard6.Name = "deelCard6";
+            deelCard6.Size = new System.Drawing.Size(101, 139);
+            deelCard6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard6.TabIndex = 18;
+            deelCard6.TabStop = false;
+            deelCard6.Visible = false;
+            // 
+            // deelCard7
+            // 
+            deelCard7.BackColor = System.Drawing.Color.Transparent;
+            deelCard7.Image = Properties.Resources.H_1;
+            deelCard7.Location = new System.Drawing.Point(629, 26);
+            deelCard7.Name = "deelCard7";
+            deelCard7.Size = new System.Drawing.Size(101, 139);
+            deelCard7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard7.TabIndex = 19;
+            deelCard7.TabStop = false;
+            deelCard7.Visible = false;
+            // 
+            // deelCard8
+            // 
+            deelCard8.BackColor = System.Drawing.Color.Transparent;
+            deelCard8.Image = Properties.Resources.H_1;
+            deelCard8.Location = new System.Drawing.Point(650, 26);
+            deelCard8.Name = "deelCard8";
+            deelCard8.Size = new System.Drawing.Size(101, 139);
+            deelCard8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard8.TabIndex = 20;
+            deelCard8.TabStop = false;
+            deelCard8.Visible = false;
+            // 
+            // deelCard9
+            // 
+            deelCard9.BackColor = System.Drawing.Color.Transparent;
+            deelCard9.Image = Properties.Resources.H_1;
+            deelCard9.Location = new System.Drawing.Point(672, 27);
+            deelCard9.Name = "deelCard9";
+            deelCard9.Size = new System.Drawing.Size(101, 139);
+            deelCard9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard9.TabIndex = 21;
+            deelCard9.TabStop = false;
+            deelCard9.Visible = false;
+            // 
+            // deelCard10
+            // 
+            deelCard10.BackColor = System.Drawing.Color.Transparent;
+            deelCard10.Image = Properties.Resources.H_1;
+            deelCard10.Location = new System.Drawing.Point(692, 27);
+            deelCard10.Name = "deelCard10";
+            deelCard10.Size = new System.Drawing.Size(101, 139);
+            deelCard10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard10.TabIndex = 22;
+            deelCard10.TabStop = false;
+            deelCard10.Visible = false;
+            // 
+            // deelCard11
+            // 
+            deelCard11.BackColor = System.Drawing.Color.Transparent;
+            deelCard11.Image = Properties.Resources.H_1;
+            deelCard11.Location = new System.Drawing.Point(715, 27);
+            deelCard11.Name = "deelCard11";
+            deelCard11.Size = new System.Drawing.Size(101, 139);
+            deelCard11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            deelCard11.TabIndex = 23;
+            deelCard11.TabStop = false;
+            deelCard11.Visible = false;
+            // 
+            // myCard2
+            // 
+            myCard2.BackColor = System.Drawing.Color.Transparent;
+            myCard2.Image = Properties.Resources.H_1;
+            myCard2.Location = new System.Drawing.Point(524, 327);
+            myCard2.Name = "myCard2";
+            myCard2.Size = new System.Drawing.Size(101, 139);
+            myCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard2.TabIndex = 14;
+            myCard2.TabStop = false;
+            myCard2.Visible = false;
+            // 
+            // myCard3
+            // 
+            myCard3.BackColor = System.Drawing.Color.Transparent;
+            myCard3.Image = Properties.Resources.H_1;
+            myCard3.Location = new System.Drawing.Point(543, 327);
+            myCard3.Name = "myCard3";
+            myCard3.Size = new System.Drawing.Size(101, 139);
+            myCard3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard3.TabIndex = 14;
+            myCard3.TabStop = false;
+            myCard3.Visible = false;
+            // 
+            // myCard4
+            // 
+            myCard4.BackColor = System.Drawing.Color.Transparent;
+            myCard4.Image = Properties.Resources.H_1;
+            myCard4.Location = new System.Drawing.Point(561, 327);
+            myCard4.Name = "myCard4";
+            myCard4.Size = new System.Drawing.Size(101, 139);
+            myCard4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard4.TabIndex = 14;
+            myCard4.TabStop = false;
+            myCard4.Visible = false;
+            // 
+            // myCard5
+            // 
+            myCard5.BackColor = System.Drawing.Color.Transparent;
+            myCard5.Image = Properties.Resources.H_1;
+            myCard5.Location = new System.Drawing.Point(580, 327);
+            myCard5.Name = "myCard5";
+            myCard5.Size = new System.Drawing.Size(101, 139);
+            myCard5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard5.TabIndex = 14;
+            myCard5.TabStop = false;
+            myCard5.Visible = false;
+            // 
+            // myCard6
+            // 
+            myCard6.BackColor = System.Drawing.Color.Transparent;
+            myCard6.Image = Properties.Resources.H_1;
+            myCard6.Location = new System.Drawing.Point(603, 327);
+            myCard6.Name = "myCard6";
+            myCard6.Size = new System.Drawing.Size(101, 139);
+            myCard6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard6.TabIndex = 14;
+            myCard6.TabStop = false;
+            myCard6.Visible = false;
+            // 
+            // myCard7
+            // 
+            myCard7.BackColor = System.Drawing.Color.Transparent;
+            myCard7.Image = Properties.Resources.H_1;
+            myCard7.Location = new System.Drawing.Point(630, 327);
+            myCard7.Name = "myCard7";
+            myCard7.Size = new System.Drawing.Size(101, 139);
+            myCard7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard7.TabIndex = 14;
+            myCard7.TabStop = false;
+            myCard7.Visible = false;
+            // 
+            // myCard8
+            // 
+            myCard8.BackColor = System.Drawing.Color.Transparent;
+            myCard8.Image = Properties.Resources.H_1;
+            myCard8.Location = new System.Drawing.Point(650, 327);
+            myCard8.Name = "myCard8";
+            myCard8.Size = new System.Drawing.Size(101, 139);
+            myCard8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard8.TabIndex = 14;
+            myCard8.TabStop = false;
+            myCard8.Visible = false;
+            // 
+            // myCard9
+            // 
+            myCard9.BackColor = System.Drawing.Color.Transparent;
+            myCard9.Image = Properties.Resources.H_1;
+            myCard9.Location = new System.Drawing.Point(668, 327);
+            myCard9.Name = "myCard9";
+            myCard9.Size = new System.Drawing.Size(101, 139);
+            myCard9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard9.TabIndex = 14;
+            myCard9.TabStop = false;
+            myCard9.Visible = false;
+            // 
+            // myCard10
+            // 
+            myCard10.BackColor = System.Drawing.Color.Transparent;
+            myCard10.Image = Properties.Resources.H_1;
+            myCard10.Location = new System.Drawing.Point(687, 327);
+            myCard10.Name = "myCard10";
+            myCard10.Size = new System.Drawing.Size(101, 139);
+            myCard10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard10.TabIndex = 14;
+            myCard10.TabStop = false;
+            myCard10.Visible = false;
+            // 
+            // myCard11
+            // 
+            myCard11.BackColor = System.Drawing.Color.Transparent;
+            myCard11.Image = Properties.Resources.H_1;
+            myCard11.Location = new System.Drawing.Point(704, 327);
+            myCard11.Name = "myCard11";
+            myCard11.Size = new System.Drawing.Size(101, 139);
+            myCard11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myCard11.TabIndex = 14;
+            myCard11.TabStop = false;
+            myCard11.Visible = false;
             // 
             // Play_Screen
             // 
@@ -240,9 +508,28 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(1109, 497);
-            Controls.Add(button1);
-            Controls.Add(pictureBox6);
-            Controls.Add(pictureBox5);
+            Controls.Add(deelCard11);
+            Controls.Add(deelCard10);
+            Controls.Add(deelCard9);
+            Controls.Add(deelCard8);
+            Controls.Add(deelCard7);
+            Controls.Add(deelCard6);
+            Controls.Add(deelCard5);
+            Controls.Add(deelCard4);
+            Controls.Add(deelCard3);
+            Controls.Add(myCard11);
+            Controls.Add(myCard10);
+            Controls.Add(myCard9);
+            Controls.Add(myCard8);
+            Controls.Add(myCard7);
+            Controls.Add(myCard6);
+            Controls.Add(myCard5);
+            Controls.Add(myCard4);
+            Controls.Add(myCard3);
+            Controls.Add(myCard2);
+            Controls.Add(myCard1);
+            Controls.Add(deelCard2);
+            Controls.Add(deelCard1);
             Controls.Add(Hit_Button);
             Controls.Add(Double_Button);
             Controls.Add(Stand_Button);
@@ -265,8 +552,28 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)deelCard11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)myCard11).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -287,8 +594,27 @@
         private System.Windows.Forms.Button Hit_Button;
         private System.Windows.Forms.Button Stand_Button;
         private System.Windows.Forms.Button Double_Button;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox deelCard1;
+        private System.Windows.Forms.PictureBox myCard1;
+        private System.Windows.Forms.PictureBox deelCard2;
+        private System.Windows.Forms.PictureBox deelCard3;
+        private System.Windows.Forms.PictureBox deelCard4;
+        private System.Windows.Forms.PictureBox deelCard5;
+        private System.Windows.Forms.PictureBox deelCard6;
+        private System.Windows.Forms.PictureBox deelCard7;
+        private System.Windows.Forms.PictureBox deelCard8;
+        private System.Windows.Forms.PictureBox deelCard9;
+        private System.Windows.Forms.PictureBox deelCard10;
+        private System.Windows.Forms.PictureBox deelCard11;
+        private System.Windows.Forms.PictureBox myCard2;
+        private System.Windows.Forms.PictureBox myCard3;
+        private System.Windows.Forms.PictureBox myCard4;
+        private System.Windows.Forms.PictureBox myCard5;
+        private System.Windows.Forms.PictureBox myCard6;
+        private System.Windows.Forms.PictureBox myCard7;
+        private System.Windows.Forms.PictureBox myCard8;
+        private System.Windows.Forms.PictureBox myCard9;
+        private System.Windows.Forms.PictureBox myCard10;
+        private System.Windows.Forms.PictureBox myCard11;
     }
 }
