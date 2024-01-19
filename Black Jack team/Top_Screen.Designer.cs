@@ -47,7 +47,7 @@
             // Rule_Button
             // 
             Rule_Button.Font = new System.Drawing.Font("Yu Gothic UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Rule_Button.Location = new System.Drawing.Point(448, 340);
+            Rule_Button.Location = new System.Drawing.Point(448, 343);
             Rule_Button.Name = "Rule_Button";
             Rule_Button.Size = new System.Drawing.Size(269, 105);
             Rule_Button.TabIndex = 1;

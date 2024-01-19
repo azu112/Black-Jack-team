@@ -42,7 +42,7 @@
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(153, 70);
             button1.TabIndex = 0;
-            button1.Text = "前へ";
+            button1.Text = "戻る";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
