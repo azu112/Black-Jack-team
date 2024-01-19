@@ -397,7 +397,7 @@ namespace Black_Jack_team
         private void motoTest_Click(object sender, EventArgs e)
         {
             game.BetDecision(2500);
-            game.DoubleDecision(1000,21,18);
+            game.DoubleDecision(1000);
         }
     }
 

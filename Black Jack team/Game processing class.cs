@@ -14,7 +14,7 @@ namespace Black_Jack_team
         public Deck_card_class Card = new Deck_card_class();
         int mydata, deeldata,Akakuni;
         public string mydraw = "";
-        public string deeldraw = "";
+        public string[] deeldraw = new string[11];
         private int Acunt = 0;
 
         //betを押したら行われるメソッド　
@@ -27,8 +27,8 @@ namespace Black_Jack_team
 
             mydata = GetCardNum(mydraw);
             //ディーラーも引く
-            deeldraw = Card.IllGiveYouOneInMyHand();
-            deeldata = GetCardNum(deeldraw);
+            deeldraw[0] = Card.IllGiveYouOneInMyHand();
+            deeldata = GetCardNum(deeldraw[0]);
 
             //MessageBox.Show(mydraw + "\n" + mydata + "\n" + chip.meny + "\n" + deeldata + "\n" + deeldraw + "\n" +"-------------");
         }
@@ -38,7 +38,7 @@ namespace Black_Jack_team
         } 
 
         //ダブルを押すと行われるメソッド
-        public void DoubleDecision(int bet, int my, int deel)
+        public void DoubleDecision(int bet)
         {
             //カードを引く
             mydraw = Card.IllGiveYouOneInMyHand();
@@ -47,19 +47,19 @@ namespace Black_Jack_team
             mydata += GetCardNum(mydraw);
             ABurst(mydata);
             //ディーラーがカードを引いたりする
-            deeldraw = Card.IllGiveYouOneInMyHand();
+            deeldraw[1] = Card.IllGiveYouOneInMyHand();
             AChecker(mydraw);
             //合計値を何とかするメソッド
-            deeldata += GetCardNum(deeldraw);
+            deeldata += GetCardNum(deeldraw[1]);
             ABurst(deeldata);
             //ディーラー17になるまでループ
-            for (int i = 0; deeldata < 17; i++)
+            for (int i = 2; deeldata < 17; i++)
             {
-                deeldraw = Card.IllGiveYouOneInMyHand();
-                deeldata += GetCardNum(deeldraw);
+                deeldraw[i] = Card.IllGiveYouOneInMyHand();
+                deeldata += GetCardNum(deeldraw[i]);
                 AChecker(mydraw);
             }
-            if (Judge(my, deel))
+            if (Judge(mydata, deeldata))
             {
                 chip.IncreaseInPossessions(bet * 2 * 2);
             }
@@ -76,7 +76,7 @@ namespace Black_Jack_team
             //合計値を何とかするメソッド
             mydata += GetCardNum(mydraw);
             ABurst(mydata);
-            MessageBox.Show(mydraw+"\n"+mydata+"\n"+ chip.meny);
+            //MessageBox.Show(mydraw+"\n"+mydata+"\n"+ chip.meny);
         }
 
         //カードの取得
@@ -93,28 +93,30 @@ namespace Black_Jack_team
             {
                 data=11;
             }
+
+
              return data;
         }
 
 
         //スタンドを押したときのメソッド
-        public void StandDecision(int bet, int my, int deel)
+        public void StandDecision(int bet)
         {
             //ディーラーがカードを引いたりする
-            deeldraw = Card.IllGiveYouOneInMyHand();
+            deeldraw[1] = Card.IllGiveYouOneInMyHand();
             AChecker(mydraw);
             //合計値を何とかするメソッド
-            deeldata += GetCardNum(deeldraw);
+            deeldata += GetCardNum(deeldraw[1]);
             ABurst(deeldata);
             //ディーラー17になるまでループ
-            for (int i = 0; deeldata < 17; i++)
+            for (int i = 2; deeldata < 17; i++)
             {
-                deeldraw = Card.IllGiveYouOneInMyHand();
-                deeldata += GetCardNum(deeldraw);
+                deeldraw[i] = Card.IllGiveYouOneInMyHand();
+                deeldata += GetCardNum(deeldraw[i]);
                 AChecker(mydraw);
             }
             //ディーラーがカードを引いたり
-            if (Judge(my, deel))
+            if (Judge(mydata, deeldata))
             {
                 chip.IncreaseInPossessions(bet * 2);
             }
