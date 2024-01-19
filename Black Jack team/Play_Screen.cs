@@ -17,7 +17,7 @@ namespace Black_Jack_team
         Game_processing_class game = new Game_processing_class();
         PictureBox[] deelCards = new PictureBox[11];
         PictureBox[] myCards = new PictureBox[11];
-
+        int myCardCount = 1;
 
         public Play_Screen()
         {
@@ -126,9 +126,9 @@ namespace Black_Jack_team
                 deelCard1.Visible = true;
                 myCard1.Visible = true;
             }
-            game.BetDecision();
-            ChangeCard(myCard1, game.myhiitano);
-            ChangeCard(deelCard1, game.deelhiitano[0]);
+            //game.BetDecision();
+            //ChangeCard(myCard1, game.myhiitano);
+            //ChangeCard(deelCard1, game.deeldraw[0]);
 
         }
 
@@ -183,8 +183,15 @@ namespace Black_Jack_team
         {
             game.HitDecision();
 
-            ChangeCard(deelCard1, game.myhiitano);
-
+            ChangeCard(myCards[myCardCount], game.mydraw);
+            myCards[myCardCount].Visible = true;
+            myCardCount++;
+            if (game.EndGame())
+            {
+                //ディーラーの手札表示
+                //勝ち負け表示
+                //画面移動
+            }
         }
 
 
@@ -422,13 +429,13 @@ namespace Black_Jack_team
         private void Stand_Button_Click(object sender, EventArgs e)
         {
             //game.StandDecision(betAmount, 20,18);
-            game.deelhiitano[1] = "H_7";
-            for(int i = 1;i<game.deelhiitano.Length;i++)
+            game.deeldraw[1] = "H_7";
+            for(int i = 1;i<game.deeldraw.Length;i++)
             {
-                if (game.deelhiitano[i] != null)
+                if (game.deeldraw[i] != null)
                 {
                     deelCards[i].Visible = true;
-                    ChangeCard(deelCards[i], game.deelhiitano[i]);
+                    ChangeCard(deelCards[i], game.deeldraw[i]);
                 }
                 
             }
@@ -437,9 +444,9 @@ namespace Black_Jack_team
 
         private void Double_Button_Click(object sender, EventArgs e)
         {
-            game.DoubleDecision(betAmount,15,13);
+            game.DoubleDecision(betAmount);
 
-            ChangeCard(deelCard1, game.myhiitano);
+            ChangeCard(deelCard1, game.mydraw);
         }
 
         //private void motoTest_Click(object sender, EventArgs e)
