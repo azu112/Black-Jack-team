@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Policy;
 using System.Text;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
@@ -15,6 +16,8 @@ namespace Black_Jack_team
         public string mydraw = "";
         public string deeldraw = "";
         private int Acunt = 0;
+
+        //betを押したら行われるメソッド　
         public  void BetDecision(int meny)
         {
             //所持金を減らす
@@ -26,13 +29,15 @@ namespace Black_Jack_team
             //ディーラーも引く
             deeldraw = Card.IllGiveYouOneInMyHand();
             deeldata = GetCardNum(deeldraw);
-            
 
+            //MessageBox.Show(mydraw + "\n" + mydata + "\n" + chip.meny + "\n" + deeldata + "\n" + deeldraw + "\n" +"-------------");
         }
         public void Goukeiti()
         {
 
         } 
+
+        //ダブルを押すと行われるメソッド
         public void DoubleDecision(int bet, int my, int deel)
         {
             //カードを引く
@@ -58,9 +63,11 @@ namespace Black_Jack_team
             {
                 chip.IncreaseInPossessions(bet * 2 * 2);
             }
-
+            //MessageBox.Show(mydraw + "\n" + mydata + "\n" + chip.meny+"\n"+ deeldata + "\n" +deeldraw);
             //ディーラーや自分が引いたカードをFoomに伝える方法を考える
         }
+
+        //Hitを押すと行われるメソッド
         public void HitDecision()
         {
             //カードを引く
@@ -69,8 +76,10 @@ namespace Black_Jack_team
             //合計値を何とかするメソッド
             mydata += GetCardNum(mydraw);
             ABurst(mydata);
+            MessageBox.Show(mydraw+"\n"+mydata+"\n"+ chip.meny);
         }
 
+        //カードの取得
         public int GetCardNum(string dada)
         {
             int data;
@@ -87,6 +96,8 @@ namespace Black_Jack_team
              return data;
         }
 
+
+        //スタンドを押したときのメソッド
         public void StandDecision(int bet, int my, int deel)
         {
             //ディーラーがカードを引いたりする
@@ -122,6 +133,8 @@ namespace Black_Jack_team
         }
         //Aを取った時の処理 IFで確認　AがでたらAチェッカー変数を1にする　ゲームオーバー処理にAチェッカーを0にする処理を作る
         //Aチェッカーを0にするメソッド必要かも？
+
+        //1を11にする処理
         public void AChecker(string card)
         {
             string[] split = card.Split('_');
@@ -131,6 +144,8 @@ namespace Black_Jack_team
             }
         }
 
+
+        //Aが11の時バーストしたら1になる処理
         public void ABurst(int data)
         {
             if (data > 21 && Acunt > 0)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Dynamic;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -156,7 +157,7 @@ namespace Black_Jack_team
             //ChangeCard(pictureBox5, game.hiitano);
         }
 
-        
+
 
         private void ChangeCard(PictureBox picture, string str)
         {
@@ -385,12 +386,18 @@ namespace Black_Jack_team
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChangeCard(pictureBox5,"H_13");
+            ChangeCard(pictureBox5, "H_13");
         }
 
         private void Stand_Button_Click(object sender, EventArgs e)
         {
             ;
+        }
+
+        private void motoTest_Click(object sender, EventArgs e)
+        {
+            game.BetDecision(2500);
+            game.DoubleDecision(1000,21,18);
         }
     }
 

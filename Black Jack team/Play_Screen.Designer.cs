@@ -44,6 +44,7 @@
             pictureBox5 = new System.Windows.Forms.PictureBox();
             pictureBox6 = new System.Windows.Forms.PictureBox();
             button1 = new System.Windows.Forms.Button();
+            motoTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -115,7 +116,6 @@
             pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
-            //pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -232,12 +232,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // motoTest
+            // 
+            motoTest.Location = new System.Drawing.Point(163, 403);
+            motoTest.Name = "motoTest";
+            motoTest.Size = new System.Drawing.Size(299, 77);
+            motoTest.TabIndex = 15;
+            motoTest.Text = "GameProsessのテスト";
+            motoTest.UseVisualStyleBackColor = true;
+            motoTest.Click += motoTest_Click;
+            // 
             // Play_Screen
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(1109, 497);
+            Controls.Add(motoTest);
             Controls.Add(button1);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
@@ -288,5 +299,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button motoTest;
     }
 }
