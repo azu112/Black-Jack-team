@@ -11,7 +11,7 @@ namespace Black_Jack_team
         List<string> tora2 = new List<string>();
         List<string> tefuda = new List<string>();
         List<string> dere = new List<string>();
-        string[] sert = { "スペド", "ハート", "クロバ", "ダイア" };
+        string[] sert = { "S", "H", "K", "D" };
         string[] suuji = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" };
 
 
@@ -24,8 +24,9 @@ namespace Black_Jack_team
             {
                 for (int j = 0; j < 13; j++)
                 {
-                    string kari = sert[i] + suuji[j];
+                    string kari = sert[i] +"_"+ suuji[j];
                     tora.Add(kari);
+
                 }
             }
         }
@@ -54,8 +55,9 @@ namespace Black_Jack_team
             returnCard = tora[ran];
             tora2.Add(tora[ran]);
             tora.Remove(tora[ran]);
-
+            
             return returnCard;
+            
 
         }
 
