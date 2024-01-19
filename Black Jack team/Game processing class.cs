@@ -11,16 +11,18 @@ namespace Black_Jack_team
         public Chip_Variation_Class chip = new Chip_Variation_Class();
         public Deck_card_class Card = new Deck_card_class();
         int my;
-        public string myhiitano="kuroba6c4";
-        public string deelhiitano = "c5c4d13";
+        public string myhiitano="C_5";
+        public string[] deelhiitano = new string[11];
         public  void BetDecision()
         {
-
+            myhiitano = "D_8";
+            deelhiitano[0] = "H_1";
         }
 
         public void DoubleDecision(int bet, int my, int deel)
         {
             //カードを引く
+            myhiitano = Card.IllGiveYouOneInMyHand();
             //合計値を何とかするメソッド
             //ディーラーがカードを引いたりする
             //合計値を何とかするメソッド

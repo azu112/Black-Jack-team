@@ -95,7 +95,12 @@ namespace Black_Jack_team
                 Hit_Button.Visible = true;
                 Stand_Button.Visible = true;
                 Double_Button.Visible = true;
+                pictureBox5.Visible = true;
+                pictureBox6.Visible = true;
             }
+            game.BetDecision();
+            ChangeCard(pictureBox6, game.myhiitano);
+            ChangeCard(pictureBox5, game.deelhiitano[0]);
 
         }
 
@@ -140,23 +145,21 @@ namespace Black_Jack_team
         // Bet_displayを更新するメソッド
         private void UpdateBetDisplay()
         {
-            Bet_display.Text = $"Bet:$ {betAmount}";
-        }
-
-        private void Bet_label_Click(object sender, EventArgs e)
-        {
-
+            Bet_display.Text = $"Bet: ${betAmount}";
+            Bet_label.Text = $"Bet: ${betAmount}";
         }
 
 
 
         private void Hit_Button_Click(object sender, EventArgs e)
         {
-            //game.
-            //ChangeCard(pictureBox5, game.hiitano);
+            game.HitDecision();
+
+            ChangeCard(pictureBox5, game.myhiitano);
+
         }
 
-        
+
 
         private void ChangeCard(PictureBox picture, string str)
         {
@@ -385,12 +388,21 @@ namespace Black_Jack_team
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChangeCard(pictureBox5,"H_13");
+            ChangeCard(pictureBox5, "H_13");
         }
 
         private void Stand_Button_Click(object sender, EventArgs e)
         {
-            ;
+            game.StandDecision(betAmount, 20,18);
+
+            ChangeCard(pictureBox5, game.myhiitano);
+        }
+
+        private void Double_Button_Click(object sender, EventArgs e)
+        {
+            game.DoubleDecision(betAmount,15,13);
+
+            ChangeCard(pictureBox5, game.myhiitano);
         }
     }
 

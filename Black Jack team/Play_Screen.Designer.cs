@@ -115,7 +115,6 @@
             pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -138,7 +137,7 @@
             Bet_label.Size = new System.Drawing.Size(94, 46);
             Bet_label.TabIndex = 10;
             Bet_label.Text = "  Bet:";
-            Bet_label.Click += Bet_label_Click;
+            Bet_label.Click += Bet_display_Click;
             // 
             // pictureBox3
             // 
@@ -167,7 +166,7 @@
             // Stand_Button
             // 
             Stand_Button.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Stand_Button.Location = new System.Drawing.Point(494, 268);
+            Stand_Button.Location = new System.Drawing.Point(484, 199);
             Stand_Button.Name = "Stand_Button";
             Stand_Button.Size = new System.Drawing.Size(199, 77);
             Stand_Button.TabIndex = 12;
@@ -179,18 +178,19 @@
             // Double_Button
             // 
             Double_Button.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Double_Button.Location = new System.Drawing.Point(720, 268);
+            Double_Button.Location = new System.Drawing.Point(720, 199);
             Double_Button.Name = "Double_Button";
             Double_Button.Size = new System.Drawing.Size(193, 77);
             Double_Button.TabIndex = 12;
             Double_Button.Text = "DOUBLE";
             Double_Button.UseVisualStyleBackColor = true;
             Double_Button.Visible = false;
+            Double_Button.Click += Double_Button_Click;
             // 
             // Hit_Button
             // 
             Hit_Button.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Hit_Button.Location = new System.Drawing.Point(265, 268);
+            Hit_Button.Location = new System.Drawing.Point(265, 199);
             Hit_Button.Name = "Hit_Button";
             Hit_Button.Size = new System.Drawing.Size(197, 77);
             Hit_Button.TabIndex = 13;
@@ -209,6 +209,7 @@
             pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 14;
             pictureBox5.TabStop = false;
+            pictureBox5.Visible = false;
             // 
             // pictureBox6
             // 
@@ -220,6 +221,7 @@
             pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 14;
             pictureBox6.TabStop = false;
+            pictureBox6.Visible = false;
             // 
             // button1
             // 
