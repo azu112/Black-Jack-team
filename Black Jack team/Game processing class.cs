@@ -69,8 +69,10 @@ namespace Black_Jack_team
             //合計値を何とかするメソッド
             mydata += GetCardNum(mydraw);
             ABurst(mydata);
+            //MessageBox.Show(mydraw+"\n"+mydata+"\n"+ chip.meny);
         }
 
+        //カードの取得
         public int GetCardNum(string dada)
         {
             int data;
