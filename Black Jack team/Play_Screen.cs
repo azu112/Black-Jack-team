@@ -128,7 +128,7 @@ namespace Black_Jack_team
                 myCard1.Visible = true;
                 game.BetDecision(betAmount);
                 ChangeCard(myCard1, game.mydraw);
-                ChangeCard(myCard2, game.mydraw);
+                ChangeCard(myCard2, game.mydraw2);
                 ChangeCard(deelCard1, game.deeldraw[0]);
                 myCard2.Visible = true;
                 deelCard2.Visible = true;
