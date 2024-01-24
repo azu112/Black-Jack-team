@@ -175,6 +175,15 @@ namespace Black_Jack_team
 
 
         }
+
+        internal bool EndGame()
+        {
+            if (mydata >= 21)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
 

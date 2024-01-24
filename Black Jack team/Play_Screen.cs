@@ -15,10 +15,37 @@ namespace Black_Jack_team
     public partial class Play_Screen : Form
     {
         Game_processing_class game = new Game_processing_class();
+        PictureBox[] deelCards = new PictureBox[11];
+        PictureBox[] myCards = new PictureBox[11];
+        int myCardCount = 1;
 
         public Play_Screen()
         {
             InitializeComponent();
+            deelCards[0] = deelCard1;
+            deelCards[1]= deelCard2;
+            deelCards[2]= deelCard3;
+            deelCards[3]= deelCard4;
+            deelCards[4]= deelCard5;
+            deelCards[5]= deelCard6;
+            deelCards[6]= deelCard7;
+            deelCards[7]= deelCard8;
+            deelCards[8]= deelCard9;
+            deelCards[9]= deelCard10;
+            deelCards[10]= deelCard11;
+
+            myCards[0]= myCard1;
+            myCards[1]= myCard2;
+            myCards[2]= myCard3;
+            myCards[3]= myCard4;
+            myCards[4]= myCard5;
+            myCards[5]= myCard6;
+            myCards[6]= myCard7;
+            myCards[7]= myCard8;
+            myCards[8]= myCard9;
+            myCards[9]= myCard10;
+            myCards[10]= myCard11;
+
         }
 
         private void Bet_TextChanged(object sender, EventArgs e)
@@ -96,7 +123,12 @@ namespace Black_Jack_team
                 Hit_Button.Visible = true;
                 Stand_Button.Visible = true;
                 Double_Button.Visible = true;
+                deelCard1.Visible = true;
+                myCard1.Visible = true;
             }
+            //game.BetDecision();
+            //ChangeCard(myCard1, game.myhiitano);
+            //ChangeCard(deelCard1, game.deeldraw[0]);
 
         }
 
@@ -141,20 +173,25 @@ namespace Black_Jack_team
         // Bet_displayを更新するメソッド
         private void UpdateBetDisplay()
         {
-            Bet_display.Text = $"Bet:$ {betAmount}";
-        }
-
-        private void Bet_label_Click(object sender, EventArgs e)
-        {
-
+            Bet_display.Text = $"Bet: ${betAmount}";
+            Bet_label.Text = $"Bet: ${betAmount}";
         }
 
 
 
         private void Hit_Button_Click(object sender, EventArgs e)
         {
-            //game.
-            //ChangeCard(pictureBox5, game.hiitano);
+            game.HitDecision();
+
+            ChangeCard(myCards[myCardCount], game.mydraw);
+            myCards[myCardCount].Visible = true;
+            myCardCount++;
+            if (game.EndGame())
+            {
+                //ディーラーの手札表示
+                //勝ち負け表示
+                //画面移動
+            }
         }
 
 
@@ -386,12 +423,30 @@ namespace Black_Jack_team
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChangeCard(pictureBox5, "H_13");
+            ChangeCard(deelCard1, "H_13");
         }
 
         private void Stand_Button_Click(object sender, EventArgs e)
         {
-            ;
+            //game.StandDecision(betAmount, 20,18);
+            game.deeldraw[1] = "H_7";
+            for(int i = 1;i<game.deeldraw.Length;i++)
+            {
+                if (game.deeldraw[i] != null)
+                {
+                    deelCards[i].Visible = true;
+                    ChangeCard(deelCards[i], game.deeldraw[i]);
+                }
+                
+            }
+            
+        }
+
+        private void Double_Button_Click(object sender, EventArgs e)
+        {
+            game.DoubleDecision(betAmount);
+
+            ChangeCard(deelCard1, game.mydraw);
         }
 
         //private void motoTest_Click(object sender, EventArgs e)
