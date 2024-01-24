@@ -11,7 +11,7 @@ namespace Black_Jack_team
         List<string> tora2 = new List<string>();
         List<string> tefuda = new List<string>();
         List<string> dere = new List<string>();
-        string[] sert = { "S", "H", "K", "D" };
+        string[] sert = { "S", "H", "C", "D" };
         string[] suuji = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" };
 
 
