@@ -19,9 +19,16 @@ namespace Black_Jack_team
         private int Acunt = 0;
 
         //betを押したら行われるメソッド　
-        public  void BetDecision(int meny)
+        public  bool BetDecision(int meny)
         {
             //所持金を減らす
+            if (chip.meny < meny)
+            {
+                //所持金より多い額別途しようとした場合に起こる処理
+                MessageBox.Show("You are about to bet more than you have." + "\n" + "（あなたは自分の持っている以上の額を賭けようとしています。）");
+                return false;
+                //掛け金を0にする
+            }
             chip.DecreaseInPossessions(meny);
             //自分が2枚引く
             mydraw = Card.IllGiveYouOneInMyHand();
@@ -32,7 +39,7 @@ namespace Black_Jack_team
             //ディーラーも引く
             deeldraw[0] = Card.IllGiveYouOneInMyHand();
             deeldata = GetCardNum(deeldraw[0]);
-
+            return true; 
             //MessageBox.Show(mydraw + "\n" + mydata + "\n" + chip.meny + "\n" + deeldata + "\n" + deeldraw + "\n" +"-------------");
         }
         public void Goukeiti()
