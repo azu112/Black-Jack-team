@@ -122,6 +122,7 @@ namespace Black_Jack_team
             }
 
         }
+        //勝敗勝ち負けもこれ使う
         public bool Judge(int mynum, int deelnum)
         {
             if (mynum > deelnum)
@@ -159,6 +160,19 @@ namespace Black_Jack_team
         }
         public void risetto()
         {
+
+        }
+        public void decision()
+        {
+            if (Judge(mydata, deeldata))
+            {
+                MessageBox.Show("あなたの勝利です。"+ "\n" +"所持金が"+ chip.meny+"増えました。");
+            }
+            else
+            {
+                MessageBox.Show("You lose");
+            }
+
 
         }
     }
