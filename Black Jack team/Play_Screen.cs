@@ -8,6 +8,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 
 namespace Black_Jack_team
@@ -23,28 +24,28 @@ namespace Black_Jack_team
         {
             InitializeComponent();
             deelCards[0] = deelCard1;
-            deelCards[1]= deelCard2;
-            deelCards[2]= deelCard3;
-            deelCards[3]= deelCard4;
-            deelCards[4]= deelCard5;
-            deelCards[5]= deelCard6;
-            deelCards[6]= deelCard7;
-            deelCards[7]= deelCard8;
-            deelCards[8]= deelCard9;
-            deelCards[9]= deelCard10;
-            deelCards[10]= deelCard11;
+            deelCards[1] = deelCard2;
+            deelCards[2] = deelCard3;
+            deelCards[3] = deelCard4;
+            deelCards[4] = deelCard5;
+            deelCards[5] = deelCard6;
+            deelCards[6] = deelCard7;
+            deelCards[7] = deelCard8;
+            deelCards[8] = deelCard9;
+            deelCards[9] = deelCard10;
+            deelCards[10] = deelCard11;
 
-            myCards[0]= myCard1;
-            myCards[1]= myCard2;
-            myCards[2]= myCard3;
-            myCards[3]= myCard4;
-            myCards[4]= myCard5;
-            myCards[5]= myCard6;
-            myCards[6]= myCard7;
-            myCards[7]= myCard8;
-            myCards[8]= myCard9;
-            myCards[9]= myCard10;
-            myCards[10]= myCard11;
+            myCards[0] = myCard1;
+            myCards[1] = myCard2;
+            myCards[2] = myCard3;
+            myCards[3] = myCard4;
+            myCards[4] = myCard5;
+            myCards[5] = myCard6;
+            myCards[6] = myCard7;
+            myCards[7] = myCard8;
+            myCards[8] = myCard9;
+            myCards[9] = myCard10;
+            myCards[10] = myCard11;
 
         }
 
@@ -125,6 +126,16 @@ namespace Black_Jack_team
                 Double_Button.Visible = true;
                 deelCard1.Visible = true;
                 myCard1.Visible = true;
+                game.BetDecision(betAmount);
+                ChangeCard(myCard1, game.mydraw);
+                ChangeCard(myCard2, game.mydraw);
+                ChangeCard(deelCard1, game.deeldraw[0]);
+                myCard2.Visible = true;
+                deelCard2.Visible = true;
+                goukeihyouji_1.Visible = true;
+                goukeihyouji_2.Visible = true;
+                goukeihyouji_1.Text = game.deeldata.ToString();
+                goukeihyouji_2.Text = game.mydata.ToString();
             }
             //game.BetDecision();
             //ChangeCard(myCard1, game.myhiitano);
@@ -430,16 +441,16 @@ namespace Black_Jack_team
         {
             //game.StandDecision(betAmount, 20,18);
             game.deeldraw[1] = "H_7";
-            for(int i = 1;i<game.deeldraw.Length;i++)
+            for (int i = 1; i < game.deeldraw.Length; i++)
             {
                 if (game.deeldraw[i] != null)
                 {
                     deelCards[i].Visible = true;
                     ChangeCard(deelCards[i], game.deeldraw[i]);
                 }
-                
+
             }
-            
+
         }
 
         private void Double_Button_Click(object sender, EventArgs e)
@@ -447,6 +458,21 @@ namespace Black_Jack_team
             game.DoubleDecision(betAmount);
 
             ChangeCard(deelCard1, game.mydraw);
+        }
+
+        private void goukeihyouji_1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void goukeihyouji_2_Click(object sender, EventArgs e)
+        {
+            //deeldata
+        }
+
+        private void deelCard1_Click(object sender, EventArgs e)
+        {
+
         }
 
         //private void motoTest_Click(object sender, EventArgs e)

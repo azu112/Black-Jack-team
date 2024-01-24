@@ -12,7 +12,7 @@ namespace Black_Jack_team
     {
         public Chip_Variation_Class chip = new Chip_Variation_Class();
         public Deck_card_class Card = new Deck_card_class();
-        int mydata, deeldata,Akakuni;
+        public int mydata, deeldata,Akakuni;
         public string mydraw = "";
         public string[] deeldraw = new string[11];
         private int Acunt = 0;
