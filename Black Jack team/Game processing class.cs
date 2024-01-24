@@ -14,6 +14,7 @@ namespace Black_Jack_team
         public Deck_card_class Card = new Deck_card_class();
         public int mydata, deeldata,Akakuni;
         public string mydraw = "";
+        public string mydraw2 = "";
         public string[] deeldraw = new string[11];
         private int Acunt = 0;
 
@@ -22,10 +23,12 @@ namespace Black_Jack_team
         {
             //所持金を減らす
             chip.DecreaseInPossessions(meny);
-            //自分が1枚引く
+            //自分が2枚引く
             mydraw = Card.IllGiveYouOneInMyHand();
 
             mydata = GetCardNum(mydraw);
+            mydraw2 = Card.IllGiveYouOneInMyHand();
+            mydata += GetCardNum(mydraw2);
             //ディーラーも引く
             deeldraw[0] = Card.IllGiveYouOneInMyHand();
             deeldata = GetCardNum(deeldraw[0]);
@@ -122,6 +125,7 @@ namespace Black_Jack_team
             }
 
         }
+        //勝敗勝ち負けもこれ使う
         public bool Judge(int mynum, int deelnum)
         {
             if (mynum > deelnum)
@@ -159,6 +163,19 @@ namespace Black_Jack_team
         }
         public void risetto()
         {
+
+        }
+        public void decision()
+        {
+            if (Judge(mydata, deeldata))
+            {
+                MessageBox.Show("あなたの勝利です。"+ "\n" +"所持金が"+ chip.meny+"増えました。");
+            }
+            else
+            {
+                MessageBox.Show("You lose");
+            }
+
 
         }
 
