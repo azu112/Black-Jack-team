@@ -12,14 +12,14 @@ namespace Black_Jack_team
     {
         public Chip_Variation_Class chip = new Chip_Variation_Class();
         public Deck_card_class Card = new Deck_card_class();
-        public int mydata, deeldata,Akakuni,manydata;
+        public int mydata, deeldata, Akakuni, manydata;
         public string mydraw = "";
         public string mydraw2 = "";
         public string[] deeldraw = new string[11];
         private int Acunt = 0;
 
         //betを押したら行われるメソッド　
-        public  bool BetDecision(int meny)
+        public bool BetDecision(int meny)
         {
             //所持金を減らす
             if (chip.meny < meny)
@@ -39,13 +39,13 @@ namespace Black_Jack_team
             //ディーラーも引く
             deeldraw[0] = Card.IllGiveYouOneInMyHand();
             deeldata = GetCardNum(deeldraw[0]);
-            return true; 
+            return true;
             //MessageBox.Show(mydraw + "\n" + mydata + "\n" + chip.meny + "\n" + deeldata + "\n" + deeldraw + "\n" +"-------------");
         }
         public void Goukeiti()
         {
 
-        } 
+        }
 
         //ダブルを押すと行われるメソッド
         public void DoubleDecision(int bet)
@@ -104,18 +104,18 @@ namespace Black_Jack_team
         {
             int data;
             string[] split = dada.Split('_');
-            data= int.Parse(split[1]);
+            data = int.Parse(split[1]);
 
             if (data > 10)
             {
-                data=10;
-            }else if (data == 1)
+                data = 10;
+            } else if (data == 1)
             {
-                data=11;
+                data = 11;
             }
 
 
-             return data;
+            return data;
         }
 
 
@@ -188,7 +188,7 @@ namespace Black_Jack_team
         {
             if (Judge(mydata, deeldata))
             {
-                MessageBox.Show("あなたの勝利です。"+ "\n" +"所持金が"+ chip.meny+"増えました。");
+                MessageBox.Show("あなたの勝利です。" + "\n" + "所持金が" + chip.meny + "増えました。");
             }
             else
             {
@@ -207,6 +207,7 @@ namespace Black_Jack_team
             }
             return false;
         }
+        public void DataReset(){}
     }
 }
 
