@@ -12,7 +12,7 @@ namespace Black_Jack_team
     {
         public Chip_Variation_Class chip = new Chip_Variation_Class();
         public Deck_card_class Card = new Deck_card_class();
-        public int mydata, deeldata,Akakuni;
+        public int mydata, deeldata,Akakuni,manydata;
         public string mydraw = "";
         public string mydraw2 = "";
         public string[] deeldraw = new string[11];
@@ -72,7 +72,10 @@ namespace Black_Jack_team
             if (Judge(mydata, deeldata))
             {
                 chip.IncreaseInPossessions(bet * 2 * 2);
+
+
             }
+
             //MessageBox.Show(mydraw + "\n" + mydata + "\n" + chip.meny+"\n"+ deeldata + "\n" +deeldraw);
             //ディーラーや自分が引いたカードをFoomに伝える方法を考える
         }
@@ -86,7 +89,14 @@ namespace Black_Jack_team
             //合計値を何とかするメソッド
             mydata += GetCardNum(mydraw);
             ABurst(mydata);
-            //MessageBox.Show(mydraw+"\n"+mydata+"\n"+ chip.meny);
+            MessageBox.Show(mydraw + "\n" + mydata + "\n" + chip.meny);
+            if (mydata > 21)
+            {
+                {
+                    MessageBox.Show("You lose");
+                    Card.ResettingADeck();
+                }
+            }
         }
 
         //カードの取得
@@ -130,6 +140,8 @@ namespace Black_Jack_team
             {
                 chip.IncreaseInPossessions(bet * 2);
             }
+
+            decision();
 
         }
         //勝敗勝ち負けもこれ使う
@@ -182,6 +194,7 @@ namespace Black_Jack_team
             {
                 MessageBox.Show("You lose");
             }
+            Card.ResettingADeck();
 
 
         }
