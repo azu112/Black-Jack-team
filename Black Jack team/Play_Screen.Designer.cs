@@ -146,6 +146,7 @@
             Cash_label.Size = new System.Drawing.Size(98, 46);
             Cash_label.TabIndex = 7;
             Cash_label.Text = "Cash:";
+            Cash_label.Click += Cash_label_Click;
             // 
             // pictureBox2
             // 
@@ -396,6 +397,7 @@
             myCard2.TabIndex = 14;
             myCard2.TabStop = false;
             myCard2.Visible = false;
+            myCard2.Click += myCard2_Click;
             // 
             // myCard3
             // 

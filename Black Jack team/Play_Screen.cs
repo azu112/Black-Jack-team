@@ -18,7 +18,7 @@ namespace Black_Jack_team
         Game_processing_class game = new Game_processing_class();
         PictureBox[] deelCards = new PictureBox[11];
         PictureBox[] myCards = new PictureBox[11];
-        int myCardCount = 1;
+        int myCardCount = 2;
 
         public Play_Screen()
         {
@@ -47,6 +47,7 @@ namespace Black_Jack_team
             myCards[9] = myCard10;
             myCards[10] = myCard11;
 
+            Cash_label.Text = $"Cash: ${game.chip.meny}";
         }
 
         private void Bet_TextChanged(object sender, EventArgs e)
@@ -114,28 +115,36 @@ namespace Black_Jack_team
             }
             else
             {
-                //ボタン非表示
-                start_Button.Visible = false;
-                Reset_Button.Visible = false;
-                Bet_display.Visible = false;
-                pictureBox1.Visible = false;
-                pictureBox3.Visible = false;
-                pictureBox4.Visible = false;
-                Hit_Button.Visible = true;
-                Stand_Button.Visible = true;
-                Double_Button.Visible = true;
-                deelCard1.Visible = true;
-                myCard1.Visible = true;
-                game.BetDecision(betAmount);
-                ChangeCard(myCard1, game.mydraw);
-                ChangeCard(myCard2, game.mydraw2);
-                ChangeCard(deelCard1, game.deeldraw[0]);
-                myCard2.Visible = true;
-                deelCard2.Visible = true;
-                goukeihyouji_1.Visible = true;
-                goukeihyouji_2.Visible = true;
-                goukeihyouji_1.Text = game.deeldata.ToString();
-                goukeihyouji_2.Text = game.mydata.ToString();
+                if (game.BetDecision(betAmount))
+                { 
+                    //ボタン非表示
+                    start_Button.Visible = false;
+                    Reset_Button.Visible = false;
+                    Bet_display.Visible = false;
+                    pictureBox1.Visible = false;
+                    pictureBox3.Visible = false;
+                    pictureBox4.Visible = false;
+                    Hit_Button.Visible = true;
+                    Stand_Button.Visible = true;
+                    Double_Button.Visible = true;
+                    deelCard1.Visible = true;
+                    myCard1.Visible = true;
+
+                    ChangeCard(myCard1, game.mydraw);
+                    ChangeCard(myCard2, game.mydraw2);
+                    ChangeCard(deelCard1, game.deeldraw[0]);
+                    myCard2.Visible = true;
+                    deelCard2.Visible = true;
+                    goukeihyouji_1.Visible = true;
+                    goukeihyouji_2.Visible = true;
+                    goukeihyouji_1.Text = game.deeldata.ToString();
+                    goukeihyouji_2.Text = game.mydata.ToString();
+                }
+                else
+                {
+                    betAmount = 0;
+                    Bet_display.Text = $"Bet:$0";
+                }
             }
             //game.BetDecision();
             //ChangeCard(myCard1, game.myhiitano);
@@ -473,6 +482,16 @@ namespace Black_Jack_team
         private void deelCard1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void myCard2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cash_label_Click(object sender, EventArgs e)
+        {
+            
         }
 
         //private void motoTest_Click(object sender, EventArgs e)
