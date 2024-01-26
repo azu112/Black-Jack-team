@@ -212,6 +212,9 @@ namespace Black_Jack_team
                 //勝ち負け表示
                 //画面移動
             }
+
+            goukeihyouji_2.Text = game.mydata.ToString();
+            
         }
 
 
@@ -460,6 +463,8 @@ namespace Black_Jack_team
 
             }
 
+            goukeihyouji_1.Text = game.deeldata.ToString();
+
         }
 
         private void Double_Button_Click(object sender, EventArgs e)
@@ -467,6 +472,9 @@ namespace Black_Jack_team
             game.DoubleDecision(betAmount);
 
             ChangeCard(deelCard1, game.mydraw);
+
+            goukeihyouji_1.Text = game.deeldata.ToString();
+            goukeihyouji_2.Text = game.mydata.ToString();
         }
 
         private void goukeihyouji_1_Click(object sender, EventArgs e)
